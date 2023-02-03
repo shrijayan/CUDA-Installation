@@ -16,17 +16,20 @@ Start by updating the system to ensure that all packages are up-to-date. Open a 
 
 
 
-```sudo apt-get update
-sudo apt-get upgrade```
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
 
 ## Step 2: Install CUDA
 Next, download the CUDA Toolkit for Jetson Nano from the NVIDIA website. The version you download should match the version of the Jetson Nano you are using.
 
 After downloading the toolkit, open a terminal and navigate to the directory where the file is stored. Run the following command to install CUDA:
 
-Copy code
-```sudo sh cuda_filename.run
-Where cuda_filename.run is the name of the file you downloaded.```
+```
+sudo sh cuda_filename.run
+Where cuda_filename.run is the name of the file you downloaded.
+```
 
 Follow the instructions in the installer to complete the installation process.
 
@@ -34,25 +37,29 @@ Follow the instructions in the installer to complete the installation process.
 After installing CUDA, you need to update your system's PATH and LD_LIBRARY_PATH environment variables to include CUDA. Open your .bashrc file with a text editor and add the following lines at the end of the file:
 
 
-Copy code
+```
 export PATH=$PATH:/usr/local/cuda/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+```
+
 Save the changes to the file and then run the following command in the terminal to apply the changes:
 
 
-Copy code
+```
 source ~/.bashrc
+```
 
 ## Step 4: Verify the Installation
 To verify that the installation was successful, run the following command in the terminal:
 
-Copy code
+```
 nvidia-smi
+```
 
 You should see output similar to the following, which indicates that CUDA is installed and functioning correctly on your Jetson Nano:
 
 
-Copy code
+```
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 450.51.05    Driver Version: 450.51.05    CUDA Version: 11.0     |
 |-------------------------------+----------------------+----------------------+
@@ -67,3 +74,4 @@ Copy code
 | Processes:                                                       GPU Memory |
 |  GPU       PID   Type   Process name                             Usage      |
 |=============================================================================|
+```
