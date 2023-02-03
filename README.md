@@ -15,9 +15,9 @@ Before starting the CUDA installation, you should have a Jetson Nano with at lea
 Start by updating the system to ensure that all packages are up-to-date. Open a terminal and enter the following commands:
 
 
-Copy code
-sudo apt-get update
-sudo apt-get upgrade
+
+```sudo apt-get update
+sudo apt-get upgrade```
 
 ## Step 2: Install CUDA
 Next, download the CUDA Toolkit for Jetson Nano from the NVIDIA website. The version you download should match the version of the Jetson Nano you are using.
@@ -25,8 +25,8 @@ Next, download the CUDA Toolkit for Jetson Nano from the NVIDIA website. The ver
 After downloading the toolkit, open a terminal and navigate to the directory where the file is stored. Run the following command to install CUDA:
 
 Copy code
-sudo sh cuda_filename.run
-Where cuda_filename.run is the name of the file you downloaded.
+```sudo sh cuda_filename.run
+Where cuda_filename.run is the name of the file you downloaded.```
 
 Follow the instructions in the installer to complete the installation process.
 
